@@ -17,3 +17,48 @@ main {
 h1 {
   color: #166534;
 }
+
+/* Navigation */
+header {
+  background-color: #166534;
+  padding: 1rem;
+}
+
+nav {
+  max-width: 70rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 40rem) {
+  nav {
+    flex-direction: column;
+  }
+}
