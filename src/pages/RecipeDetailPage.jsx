@@ -2,10 +2,14 @@ import { useParams, Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Spinner from "../components/Spinner";
 import ErrorMessage from "../components/ErrorMessage";
+import { useFavorites } from "../context/FavoritesContext";
 
 export default function RecipeDetailPage() {
   // Get recipe ID from URL
   const { recipeId } = useParams();
+
+  // Access shared favorites
+const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
   // Fetch full recipe details
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`;
@@ -40,6 +44,22 @@ export default function RecipeDetailPage() {
       {recipe && (
         <>
           <h1>{recipe.strMeal}</h1>
+          
+          {/* Save or remove favorite recipe */}
+          <button
+            type="button"
+            className="favorite-button"
+            aria-pressed={isFavorite(recipe.idMeal)}
+            onClick={() =>
+            isFavorite(recipe.idMeal)
+            ? removeFavorite(recipe.idMeal)
+            : addFavorite(recipe.idMeal)
+  }
+>
+            {isFavorite(recipe.idMeal)
+            ? "♥ Remove from Favorites"
+            : "♡ Add to Favorites"}
+          </button>
 
           <img
             src={recipe.strMealThumb}

@@ -1,14 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { FavoritesProvider } from "./context/FavoritesContext";
 import "./index.css";
 import App from "./App.jsx";
 
-// Enable React Router
+// Share favorites across the app
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <FavoritesProvider>
+        <App />
+      </FavoritesProvider>
     </BrowserRouter>
   </StrictMode>
 );
