@@ -140,3 +140,30 @@ nav a.active {
   outline: 3px solid #166534;
   outline-offset: -3px;
 }
+
+/* Recipe detail page */
+.recipe-detail {
+  max-width: 50rem;
+  margin: auto;
+  text-align: left;
+}
+
+.recipe-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 35rem;
+  border-radius: 0.75rem;
+  margin: 1.5rem auto;
+}
+
+/* Ingredients */
+.ingredient-list {
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+/* Cooking instructions */
+.instructions {
+  line-height: 1.8;
+  white-space: pre-line;
+}
