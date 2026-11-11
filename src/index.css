@@ -2,3 +2,18 @@
 * {
   box-sizing: border-box;
 }
+
+/* Consistent element sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent oversized images */
+img {
+  max-width: 100%;
+}
+
+/* Improve mobile text sizing */
+html {
+  font-size: 100%;
+}

@@ -241,3 +241,117 @@ nav a.active {
   outline: 0.2rem solid #facc15;
   outline-offset: 0.2rem;
 }
+
+/* Consistent page spacing */
+main {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+h1 {
+  line-height: 1.3;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+/* Responsive Navbar */
+nav {
+  flex-wrap: wrap;
+}
+
+nav ul {
+  align-items: center;
+}
+
+.search-form input {
+  max-width: 100%;
+}
+
+/* Accessible button and link focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 0.2rem solid #facc15;
+  outline-offset: 0.2rem;
+}
+
+/* Consistent card transitions */
+.category-card,
+.recipe-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover,
+.recipe-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem #00000018;
+}
+
+/* Recipe image sizing */
+.recipe-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Recipe details readability */
+.recipe-detail {
+  width: 100%;
+}
+
+.recipe-detail-image {
+  height: auto;
+}
+
+.instructions {
+  overflow-wrap: anywhere;
+}
+
+/* Tablet and mobile screens */
+@media (max-width: 48rem) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .search-form {
+    width: 100%;
+    max-width: 25rem;
+  }
+
+  .search-form input {
+    flex: 1;
+  }
+
+  main {
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 30rem) {
+  .category-grid,
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  .search-form button {
+    padding: 0.6rem;
+  }
+
+  .recipe-detail-image {
+    width: 100%;
+  }
+}
