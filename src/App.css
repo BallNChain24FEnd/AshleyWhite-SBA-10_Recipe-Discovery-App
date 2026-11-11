@@ -100,3 +100,43 @@ nav a.active {
   outline: 3px solid #166534;
   outline-offset: 3px;
 }
+
+/* Recipe grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Recipe cards */
+.recipe-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #00000015;
+}
+
+.recipe-card a {
+  color: #166534;
+  text-decoration: none;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  padding: 0 1rem 1rem;
+}
+
+.recipe-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.recipe-card a:focus-visible {
+  outline: 3px solid #166534;
+  outline-offset: -3px;
+}
